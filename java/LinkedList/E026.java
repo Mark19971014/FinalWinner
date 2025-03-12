@@ -5,7 +5,10 @@ class E026 {
     public E026(){}
 
     public ListNode reverseList(ListNode head){
-       
+        if (head == null || head.next == null){
+            return head;
+        }
+
         ListNode prev = null;
         ListNode cur = head;
         while(cur!= null){
@@ -15,7 +18,7 @@ class E026 {
             cur = next;
       
         }
-          return head;
+          return prev;
     }
 
     public void printList(ListNode head) {
